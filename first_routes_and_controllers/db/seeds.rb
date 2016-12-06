@@ -24,3 +24,18 @@ cs1 = ContactShare.create!(contact_id: c1.id, user_id: nate.id)
 cs2 = ContactShare.create!(contact_id: c2.id, user_id: bob.id)
 cs3 = ContactShare.create!(contact_id: c3.id, user_id: jeff.id)
 cs4 = ContactShare.create!(contact_id: c4.id, user_id: adam.id)
+
+
+comment1 = Comment.create!(
+title: "ONE FUN",
+author_id: nate.id,
+author_type: User,
+body: "This should be comment one by Nate"
+)
+
+comment2 = Comment.create!(
+title: "2 SHOE",
+author_id: jeff.id,
+author_type: User,
+body: "This should be comment two by Jeff"
+)

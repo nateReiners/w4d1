@@ -1,4 +1,4 @@
-class ContactShares < ApplicationController
+class ContactSharesController < ApplicationController
 
   def create
     @contact_share = ContactShare.new(contact_share_params)
@@ -6,6 +6,7 @@ class ContactShares < ApplicationController
       render json: @contact_share
     else
       render json: @contact_share.errors.full_messages, status: :unprocessable_entity
+
     end
   end
 

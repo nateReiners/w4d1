@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   resources :contact_shares, only:[:create, :destroy]
 
-
+  resources :comments, only:[:create, :destroy, :show, :update]
       #
       get '/users' => 'users#index'
       post '/users' => 'users#create'
@@ -70,4 +70,5 @@ Rails.application.routes.draw do
       put '/users/:id' => 'users#update'
       delete '/users/:id' => 'users#destroy'
       get '/users/:user_id/contacts' => 'contacts#index'
+      get '/users/:user_id/comments' => 'comments#index'
 end

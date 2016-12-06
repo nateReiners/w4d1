@@ -10,7 +10,8 @@ class ContactsController < ApplicationController
     if @contact.save
       render json: @contact
     else
-      render json: errors.full_messages, status: :unprocessable_entity
+      render json: @contact.errors.full_messages, status: :unprocessable_entity
+
     end
   end
 
@@ -24,7 +25,8 @@ class ContactsController < ApplicationController
     if @contact.update(contact_params)
       render json: @contact
     else
-      render json: errors.full_messages, status: :unprocessable_entity
+      render json: @contact.errors.full_messages, status: :unprocessable_entity
+
     end
   end
 
@@ -36,6 +38,7 @@ class ContactsController < ApplicationController
 
 
   private
+
   def contact_params
     params.require(:contact).permit(:name, :email, :user_id)
   end
