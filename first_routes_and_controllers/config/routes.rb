@@ -71,4 +71,5 @@ Rails.application.routes.draw do
       delete '/users/:id' => 'users#destroy'
       get '/users/:user_id/contacts' => 'contacts#index'
       get '/users/:user_id/comments' => 'comments#index'
+      
 end
