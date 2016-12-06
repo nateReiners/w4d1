@@ -20,9 +20,9 @@ c5 = Contact.create!(name: "C5", email: "c5.c1@gmail.com", user_id: jeff.id)
 c6 = Contact.create!(name: "C6", email: "c6.c1@gmail.com", user_id: adam.id)
 
 
-cs1 = ContactShare.create!(contact_id: c1.id, user_id: nate.id)
-cs2 = ContactShare.create!(contact_id: c2.id, user_id: bob.id)
-cs3 = ContactShare.create!(contact_id: c3.id, user_id: jeff.id)
+cs1 = ContactShare.create!(contact_id: c1.id, user_id: adam.id)
+cs2 = ContactShare.create!(contact_id: c2.id, user_id: adam.id)
+cs3 = ContactShare.create!(contact_id: c3.id, user_id: adam.id)
 cs4 = ContactShare.create!(contact_id: c4.id, user_id: adam.id)
 
 
